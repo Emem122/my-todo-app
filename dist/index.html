@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>My Todo App</title>
+		<link rel="stylesheet" href="./output.css" />
+	</head>
+	<body class="bg-zinc-800 text-slate-50">
+		<h1 class="my-5 text-3xl font-bold text-center">My Todo App</h1>
+
+		<!-- input area -->
+		<div class="task-input max-w-md mx-auto px-5 relative h-12 flex items-center gap-2">
+			<span class="emoji-yellow absolute text-lg">&#9997;</span>
+			<input
+				type="text"
+				placeholder="新しいタスクを作成する"
+				class="h-full w-full pl-12 pr-6 border-2 border-transparent rounded-md bg-zinc-700 focus:placeholder:text-transparent focus:outline-none focus:border-teal-600"
+			/>
+			<div class="add-btn flex-shrink-0">
+				<button class="bg-teal-600 px-4 py-2 rounded-md font-bold shadow-sm shadow-gray-900">追加</button>
+			</div>
+		</div>
+
+		<!-- filter -->
+		<div class="filters max-w-md mx-auto mt-8 mb-1 px-3 flex justify-around">
+			<span class="filter-button active" id="all">All</span>
+			<span class="filter-button" id="active">Active</span>
+			<span class="filter-button" id="completed">Done</span>
+		</div>
+
+		<!-- task -->
+		<ul class="task-list max-w-md mx-auto px-5"></ul>
+
+		<!-- script -->
+		<script src="./script.js"></script>
+	</body>
+</html>
+<!-- rounded-full w-6 h-6 -->
